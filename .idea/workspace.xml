@@ -4,35 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e4889f-60fb-440c-9d02-0d2717d29d8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(auth)/register.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/(tabs)/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/(tabs)/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/(tabs)/profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/job/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(main)/resume.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/job-details.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/register.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/resume.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tamagui.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/adaptive-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/splash-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" />
+    <list default="true" id="a4e4889f-60fb-440c-9d02-0d2717d29d8f" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/features/auth-by-email/model/useLogin.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth-by-email/model/useRegister.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth-by-email/ui/LoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth-by-email/ui/RegisterForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/login/ui/Page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/register/ui/Page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/api/supabase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/lib/theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/ui/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/ui/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(main)/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/(tabs)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(main)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tamagui.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +36,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -77,10 +86,13 @@
       <recent name="C:\work\NextJob\app\(auth)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\NextJob\app\(auth)" />
+      <recent name="C:\work\NextJob\app\(auth)\login" />
+      <recent name="C:\work\NextJob\app\(auth)\register" />
       <recent name="C:\work\NextJob\app\(main)\(tabs)" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.ios">
+  <component name="RunManager" selected="npm.start">
     <configuration name="ios" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -103,8 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.ios" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.ios" />
       </list>
     </recent_temporary>
   </component>
@@ -122,11 +134,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769346749435</updated>
-      <workItem from="1769346751785" duration="2228000" />
+      <workItem from="1769346751785" duration="9736000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <option name="closed" value="true" />
+      <created>1769350418233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769350418233</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
