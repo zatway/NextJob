@@ -1,9 +1,10 @@
-import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { MyButton } from '../../../shared/ui/Button';
 import { MyInput } from '../../../shared/ui/Input';
 import { useRegister } from '../model/useRegister';
 import { Spacing } from '../../../shared/lib/theme';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export const RegisterForm = () => {
     const {
@@ -14,6 +15,15 @@ export const RegisterForm = () => {
         birthday, setBirthday,
         loading, handleRegister
     } = useRegister();
+
+    const [showDatePicker, setShowDatePicker] = useState(false);
+
+    const onDateChange = (event: any, selectedDate?: Date) => {
+        setShowDatePicker(false);
+        if (selectedDate) {
+            setBirthday(selectedDate.toISOString());
+        }
+    };
 
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
@@ -39,12 +49,25 @@ export const RegisterForm = () => {
                     onChangeText={setPhone}
                     keyboardType="phone-pad"
                 />
-                <MyInput
-                    label="Дата рождения"
-                    placeholder="YYYY-MM-DD"
-                    value={birthday}
-                    onChangeText={setBirthday}
-                />
+                <TouchableOpacity onPress={() => setShowDatePicker(true)}>
+                    <View pointerEvents="none">
+                        <MyInput
+                            label="Дата рождения"
+                            value={birthday ? new Date(birthday).toLocaleDateString() : ''}
+                            editable={false}
+                        />
+                    </View>
+                </TouchableOpacity>
+
+                {showDatePicker && (
+                    <DateTimePicker
+                        value={birthday ? new Date(birthday) : new Date()}
+                        mode="date"
+                        display="calendar"
+                        onChange={onDateChange}
+                        maximumDate={new Date()}
+                    />
+                )}
                 <MyInput
                     label="Пароль"
                     placeholder="Минимум 6 символов"

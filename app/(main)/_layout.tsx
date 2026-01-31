@@ -15,6 +15,14 @@ export default function MainLayout() {
                 name="resume"
                 options={{ title: 'Мое резюме' }}
             />
+            <Stack.Screen
+                name="profile-edit"
+                options={{
+                    headerShown: true,
+                    title: 'Редактировать профиль',
+                    headerBackTitle: 'Отмена'
+                }}
+            />
         </Stack>
     );
 }

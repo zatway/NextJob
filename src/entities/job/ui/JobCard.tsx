@@ -43,7 +43,7 @@ export const JobCard = ({job}: JobCardProps) => {
                     />
                 </TouchableOpacity>
             </View>
-            <Text style={styles.company}>{job.company_name} ✓</Text>
+            <Text style={styles.company}>{job.company_name}</Text>
             <Text style={styles.location}>{job.address}</Text>
             <Badge title="Будьте первыми"/>
             <Text style={styles.description} numberOfLines={3}>{job.description}</Text>

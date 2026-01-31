@@ -4,16 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e4889f-60fb-440c-9d02-0d2717d29d8f" name="Changes" comment="create job, JobDetails.tsx, routing fix">
-      <change afterPath="$PROJECT_DIR$/src/shared/enums/ExperienceLevel.ts" afterDir="false" />
+    <list default="true" id="a4e4889f-60fb-440c-9d02-0d2717d29d8f" name="Changes" comment="fix JobDetails.tsx styles">
+      <change afterPath="$PROJECT_DIR$/app/(main)/profile-edit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/model/useProfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/model/useResume.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/model/useResumeMutations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/apply-to-job/model/useApply.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(main)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/job/model/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/job/model/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/job/ui/JobDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/job/ui/JobDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/user/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/user/api/userApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/user/models/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/user/model/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/user/ui/ResumeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/user/ui/ResumeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/auth-by-email/model/useRegister.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth-by-email/model/useRegister.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/auth-by-email/ui/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth-by-email/ui/RegisterForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/job-details/ui/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/job-details/ui/Page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/enums/JobType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/enums/JobType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile-edit/ui/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile-edit/ui/Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/ui/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/ui/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/resume/ui/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/resume/ui/Page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/lib/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/lib/theme.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/ui/Tag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/Tag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/utils/dateUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/utils/dateUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769346749435</updated>
       <workItem from="1769346751785" duration="23616000" />
-      <workItem from="1769786196707" duration="22697000" />
+      <workItem from="1769786196707" duration="43636000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -158,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769802565791</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix JobDetails.tsx styles">
+      <option name="closed" value="true" />
+      <created>1769865774239</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769865774239</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +202,7 @@
     <MESSAGE value="1" />
     <MESSAGE value="create login and register screens" />
     <MESSAGE value="create job, JobDetails.tsx, routing fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="create job, JobDetails.tsx, routing fix" />
+    <MESSAGE value="fix JobDetails.tsx styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix JobDetails.tsx styles" />
   </component>
 </project>

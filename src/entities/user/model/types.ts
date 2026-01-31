@@ -1,5 +1,6 @@
 export interface Profile {
-    id: string;
+    id?: string;
+    user_id: string;
     full_name: string | null;
     phone: string | null;
     birth_date: string | null;
@@ -10,7 +11,10 @@ export interface Resume {
     id: string;
     user_id: string;
     title: string;
-    about: string;
+    about: string | null;
     skills: string[];
+    views_count: number;
+    appearances_count: number;
     created_at: string;
+    updated_at: string;
 }

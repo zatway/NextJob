@@ -1,13 +1,15 @@
-import {View, Text, StyleSheet} from 'react-native';
-import {Colors} from "../lib/theme";
+import { View, Text, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import { Colors } from "../lib/theme";
 
 interface TagProps {
-    title: string
+    title: string;
+    style?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
 }
 
-export const Tag = ({title}: TagProps) => (
-    <View style={styles.tag}>
-        <Text style={styles.text}>{title}</Text>
+export const Tag = ({ title, style, textStyle }: TagProps) => (
+    <View style={[styles.tag, style]}>
+        <Text style={[styles.text, textStyle]}>{title}</Text>
     </View>
 );
 
@@ -15,10 +17,16 @@ const styles = StyleSheet.create({
     tag: {
         backgroundColor: Colors.surface,
         paddingHorizontal: 12,
-        paddingVertical: 6,
-        borderRadius: 8,
+        paddingVertical: 8,
+        borderRadius: 12,
         marginRight: 8,
-        marginBottom: 8
+        marginBottom: 8,
+        borderWidth: 1,
+        borderColor: 'transparent',
     },
-    text: {color: Colors.textSecondary, fontSize: 12},
+    text: {
+        color: Colors.textSecondary,
+        fontSize: 13,
+        fontWeight: '500'
+    },
 });

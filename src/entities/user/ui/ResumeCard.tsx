@@ -1,28 +1,45 @@
 import {View, Text, StyleSheet} from "react-native";
+import {Resume} from "../model/types";
+import {Colors} from "../../../shared/lib/theme";
 
-export const ResumeCard = ({ title, date, description, stats }: any) => (
-    <View style={styles.card}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.date}>Обновлено {date}</Text>
-        <Text style={styles.desc}>{description}</Text>
-        <View style={styles.statsRow}>
-            {stats.map((s: any, i: number) => (
-                <View key={i} style={styles.statBox}>
-                    <Text style={styles.statVal}>{s.value}</Text>
-                    <Text style={styles.statLabel}>{s.label}</Text>
+interface ResumeCardProps {
+    resume: Resume;
+}
+
+export const ResumeCard = ({resume}: ResumeCardProps) => {
+    const updatedAt = new Date(resume.updated_at).toLocaleDateString();
+
+    return (
+        <View style={styles.card} key={resume.id}>
+            <Text style={styles.title}>{resume.title}</Text>
+            <Text style={styles.date}>Обновлено {updatedAt}</Text>
+            <Text style={styles.desc}>{resume.about}</Text>
+            <View style={styles.stats}>
+                <View style={styles.statsRow}>
+                    <View style={styles.statBox}>
+                        <Text style={styles.statVal}>{resume.appearances_count}</Text>
+                        <Text style={styles.statValText}>показы</Text>
+                    </View>
                 </View>
-            ))}
+                <View style={styles.statsRow}>
+                    <View style={styles.statBox}>
+                        <Text style={styles.statVal}>{resume.views_count}</Text>
+                        <Text style={styles.statValText}>просмотры</Text>
+                    </View>
+                </View>
+            </View>
         </View>
-    </View>
-);
+    )
+};
 
 const styles = StyleSheet.create({
-    card: { backgroundColor: 'white', borderRadius: 20, padding: 20, marginBottom: 16 },
-    title: { fontSize: 18, fontWeight: 'bold' },
-    date: { fontSize: 12, color: '#BBB', marginVertical: 4 },
-    desc: { fontSize: 13, color: '#666', marginBottom: 15 },
-    statsRow: { flexDirection: 'row', justifyContent: 'space-between' },
-    statBox: { alignItems: 'flex-start' },
-    statVal: { fontSize: 16, fontWeight: 'bold' },
-    statLabel: { fontSize: 10, color: '#999' },
+    card: {backgroundColor: Colors.white, borderRadius: 20, padding: 20, marginBottom: 16},
+    title: {fontSize: 18, fontWeight: 'bold'},
+    date: {fontSize: 12, color: Colors.textSecondary, marginVertical: 4},
+    desc: {fontSize: 13, color: Colors.textMain, marginBottom: 15},
+    stats: {flexDirection: 'row', justifyContent: 'space-between'},
+    statsRow: {flexDirection: 'column', justifyContent: 'space-between'},
+    statBox: {alignItems: 'flex-start'},
+    statVal: {fontSize: 14, color: Colors.textMain},
+    statValText: {fontSize: 12, color: Colors.textMain},
 });

@@ -17,15 +17,6 @@ export const JobDetailsPage = () => {
         }
     }, [isFavorite]);
 
-    const handleApply = () => {
-        Alert.alert("Успех", "Ваш отклик отправлен!", [
-            {
-                text: "OK", onPress: () => {
-                }
-            }//router.push('/(tabs)')
-        ]);
-    };
-
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -43,12 +34,8 @@ export const JobDetailsPage = () => {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={{ flex: 1 }}>
                 <JobDetails id={id}/>
-            </ScrollView>
-
-            <View style={styles.footer}>
-                <MyButton title="Откликнуться" onPress={handleApply}/>
             </View>
         </View>
     );
@@ -56,18 +43,16 @@ export const JobDetailsPage = () => {
 
 const styles = StyleSheet.create({
     container: {flex: 1, backgroundColor: Colors.background},
-    header: {flexDirection: 'row', justifyContent: 'space-between',marginTop: 20},
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 20,
+        backgroundColor: Colors.white,
+        padding: 10,
+        borderRadius: 10
+    },
     rightIcons: {flexDirection: 'row', alignItems: 'center'},
     iconBtn: {padding: 8},
     iconText: {fontSize: 24, fontWeight: '300'},
     iconButton: {padding: 8, marginLeft: 10},
-    footer: {
-        padding: 20,
-        backgroundColor: 'white',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        elevation: 5,
-        shadowOpacity: 0.05,
-        shadowRadius: 10
-    }
 });

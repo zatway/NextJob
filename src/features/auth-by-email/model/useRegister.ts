@@ -1,18 +1,25 @@
 import { useState } from 'react';
 import { Alert } from 'react-native';
 import { supabase } from '../../../shared/api/supabase';
+import {Profile} from "../../../entities/user/model/types";
+import {validateAge} from "../../../shared/utils/dateUtils";
 
 export const useRegister = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [fullName, setFullName] = useState('');
     const [phone, setPhone] = useState('');
-    const [birthday, setBirthday] = useState(''); // Формат YYYY-MM-DD
+    const [birthday, setBirthday] = useState('');
     const [loading, setLoading] = useState(false);
 
     const handleRegister = async () => {
         if (!email || !password || !fullName) {
             Alert.alert('Ошибка', 'Почта, пароль и ФИО обязательны');
+            return;
+        }
+
+        if (!validateAge(birthday)) {
+            Alert.alert('Ошибка', 'Регистрация доступна только лицам старше 16 лет');
             return;
         }
 
@@ -28,25 +35,40 @@ export const useRegister = () => {
             setLoading(false);
             return;
         }
+        const { error } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+        });
+
+        if (error) {
+            Alert.alert('Ошибка авторизации', error.message);
+            setLoading(false);
+            return;
+        }
 
         if (authData.user) {
+            const isoDate = new Date(birthday).toISOString().split('T')[0];
+
+            const profileData = {
+                user_id: authData.user.id,
+                full_name: fullName,
+                phone: phone,
+                birth_date: isoDate,
+            }
+
             const { error: profileError } = await supabase
                 .from('profiles')
-                .update({
-                    full_name: fullName,
-                    phone_text: phone,
-                    birthday: birthday || null,
-                    updated_at: new Date(),
-                })
-                .eq('id', authData.user.id);
+                .upsert(profileData, { onConflict: 'user_id' });
 
             if (profileError) {
-                console.error('Ошибка профиля:', profileError.message);
+                console.log('DEBUG PROFILE ERROR:', JSON.stringify(profileError, null, 2));
+                Alert.alert('Ошибка БД', profileError.message);
+            } else {
+                Alert.alert('Успех', 'Профиль создан успешно!');
             }
         }
 
         setLoading(false);
-        Alert.alert('Успех', 'Аккаунт создан! Подтвердите почту.');
     };
 
     return {
