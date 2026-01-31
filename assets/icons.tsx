@@ -7,7 +7,13 @@ interface IconProps {
     size?: number;
 }
 
-// Новая иконка Heart (Избранное)
+export const ArrowIcon = ({ size = 24 }: IconProps) => (
+    <Svg width={size} height={size} viewBox="0 0 9 16" fill="none">
+        <Path  d="M8 15L1 8L8 1" stroke="#313131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        />
+    </Svg>
+);
+
 export const HeartIcon = ({ color = Colors.textSecondary, size = 24 }: IconProps) => (
     <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
         <Path

@@ -4,8 +4,8 @@ export const Colors = {
     danger: '#c50a0a',
     background: '#F9F9FB',
     surface: '#EDEDED',
-    textMain: '#313131',
-    textSecondary: '#000000',
+    textMain: '#000000',
+    textSecondary: '#313131',
     white: '#FFFFFF',
     lightYellow: '#E5D3A0',
     lightSalad: '#A6D4C4'

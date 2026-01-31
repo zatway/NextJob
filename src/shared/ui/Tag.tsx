@@ -13,7 +13,7 @@ export const Tag = ({title}: TagProps) => (
 
 const styles = StyleSheet.create({
     tag: {
-        backgroundColor: Colors.background,
+        backgroundColor: Colors.surface,
         paddingHorizontal: 12,
         paddingVertical: 6,
         borderRadius: 8,

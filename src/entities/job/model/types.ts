@@ -1,3 +1,7 @@
+import { ExperienceLevel } from '../../../shared/enums/ExperienceLevel';
+import {EmploymentType, WorkMode} from '../../../shared/enums/JobType';
+import { SkillTag } from '../../../shared/enums/SkillTag';
+
 export interface Job {
     id: string;
     title: string;
@@ -7,6 +11,11 @@ export interface Job {
     address: string;
     description: string;
     responsibilities: string[];
-    skills: string[];
+    requirements: string[];
+    conditions: string[];
+    skills: SkillTag[];
+    experience: ExperienceLevel;
+    employment: EmploymentType;
+    work_mode: WorkMode;
     created_at: string;
 }
